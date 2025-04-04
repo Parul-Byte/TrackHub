@@ -29,27 +29,27 @@ Answer security questions to claim items <br>
 Admin approval for valuable items <br>
 QR code scanning for campus property <br>
 
-### 🏆 Reward System
-Earn points for returning items
-Unlock achievement badges
-Top helpers get featured monthly
+### 🏆 Reward System<br>
+Earn points for returning items<br>
+Unlock achievement badges<br>
+Top helpers get featured monthly<br>
 
-### 👨‍💻 Admin Features
-Dashboard to manage all reports
-Resolve disputes between users
-Generate monthly lost/found reports
+### 👨‍💻 Admin Features<br>
+Dashboard to manage all reports<br>
+Resolve disputes between users<br>
+Generate monthly lost/found reports<br>
 
-### 📱 Future Plans
-Mobile app development
-Campus kiosks for quick reporting
-Integration with student ID system
+### 📱 Future Plans<br>
+Mobile app development<br>
+Campus kiosks for quick reporting<br>
+Integration with student ID system<br>
 
-### 🛠 Our Tech Stack
-Frontend: React + Tailwind CSS
-Backend: JavaScript
-Database: MongoDB
-Storage: Firebase for images
-Maps: Google Maps API
+### 🛠 Our Tech Stack<br>
+Frontend: React + Tailwind CSS<br>
+Backend: JavaScript<br>
+Database: MongoDB<br>
+Storage: Firebase for images<br>
+Maps: Google Maps API<br>
 
-💡 Let's make our campus more connected!
+💡 Let's make our campus more connected!<br>
 Every returned item = one happy student! 😊
