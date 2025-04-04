@@ -1,49 +1,50 @@
-# TrackHub
-### 🔍 Lost & Found Campus Connect
-A friendly platform to reunite lost items with their owners across campus
+# TrackHub <br>
+### 🔍 Lost & Found Campus Connect <br>
+A friendly platform to reunite lost items with their owners across campus <br>
 
-✨ Core Features
-📝 Easy Reporting\n
-Simple form to report lost/found items\n
-Upload photos + add detailed descriptions\n
-Categorize items (electronics, books, IDs, etc.)
+✨ Core Features <br>
 
-# 🔍 Smart Search System
-Filter by category, location, date, or keywords
-Save frequent searches (like "AirPods case")
-Map view of recent lost/found hotspots
+### 📝 Easy Reporting <br>
+Simple form to report lost/found items <br>
+Upload photos + add detailed descriptions <br>
+Categorize items (electronics, books, IDs, etc.) <br>
 
-# 🔔 Smart Alerts
-Get instant notifications when your lost item is found
-Set up custom alerts ("Notify me about lost black wallets")
-Email + in-app notifications
+### 🔍 Smart Search System <br>
+Filter by category, location, date, or keywords <br>
+Save frequent searches (like "AirPods case") <br>
+Map view of recent lost/found hotspots <br>
 
-# 💬 Secure Communication
-Built-in anonymous messaging
-Option to share contact info after verifying identity
-Report suspicious users to admins
+### 🔔 Smart Alerts <br>
+Get instant notifications when your lost item is found <br>
+Set up custom alerts ("Notify me about lost black wallets") <br>
+Email + in-app notifications <br>
 
-# ✅ Verification System
-Answer security questions to claim items
-Admin approval for valuable items
-QR code scanning for campus property
+### 💬 Secure Communication <br>
+Built-in anonymous messaging <br>
+Option to share contact info after verifying identity <br>
+Report suspicious users to admins <br>
 
-# 🏆 Reward System
+### ✅ Verification System <br>
+Answer security questions to claim items <br>
+Admin approval for valuable items <br>
+QR code scanning for campus property <br>
+
+### 🏆 Reward System
 Earn points for returning items
 Unlock achievement badges
 Top helpers get featured monthly
 
-# 👨‍💻 Admin Features
+### 👨‍💻 Admin Features
 Dashboard to manage all reports
 Resolve disputes between users
 Generate monthly lost/found reports
 
-# 📱 Future Plans
+### 📱 Future Plans
 Mobile app development
 Campus kiosks for quick reporting
 Integration with student ID system
 
-# 🛠 Our Tech Stack
+### 🛠 Our Tech Stack
 Frontend: React + Tailwind CSS
 Backend: JavaScript
 Database: MongoDB
