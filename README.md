@@ -45,7 +45,7 @@ Campus kiosks for quick reporting<br>
 Integration with student ID system<br>
 
 ### 🛠 Our Tech Stack<br>
-Frontend: React + Tailwind CSS<br>
+Frontend: HTML + CSS<br>
 Backend: JavaScript<br>
 Database: MongoDB<br>
 Storage: Firebase for images<br>
