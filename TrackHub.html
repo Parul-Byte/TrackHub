@@ -1,59 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Meta tags for character encoding and responsive design -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Page title -->
     <title>Campus Lost & Found</title>
-    <!-- External CSS stylesheet -->
-    <link rel="stylesheet" href="TrackHub.css">
-     <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="TrackHub.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <!-- Logo and Title -->
-        <div class="logo">
+    <header class="sticky-header">
+        <div class="logo animate__animated animate__fadeInLeft">
             <i class="fas fa-search-location"></i>
             <h1>Campus Lost & Found</h1>
         </div>
-        <!-- Navigation Menu -->
         <nav>
             <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#lost-items">Lost Items</a></li>
-                <li><a href="#found-items">Found Items</a></li>
-                <li><a href="#report">Report</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#" class="active nav-link">Home</a></li>
+                <li><a href="#lost-items" class="nav-link">Lost Items</a></li>
+                <li><a href="#found-items" class="nav-link">Found Items</a></li>
+                <li><a href="#report" class="nav-link">Report</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
             </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
-         <!-- Login/Register Buttons -->
         <div class="auth-buttons">
-            <button id="login-btn">Login</button>
-            <button id="register-btn">Register</button>
+            <button id="login-btn" class="btn-outline">Login</button>
+            <button id="register-btn" class="btn-primary">Register</button>
         </div>
     </header>
-<!-- Main Content -->
+
     <main>
-        <!-- Hero Section -->
         <section class="hero">
-            <div class="hero-content">
+            <div class="hero-content animate__animated animate__fadeIn">
                 <h2>Lost Something on Campus?</h2>
                 <p>Our community helps reunite lost items with their owners</p>
                 <div class="cta-buttons">
-                    <button id="report-lost-btn">Report Lost Item</button>
-                    <button id="report-found-btn">Report Found Item</button>
+                    <button id="report-lost-btn" class="btn-primary pulse">Report Lost Item</button>
+                    <button id="report-found-btn" class="btn-secondary">Report Found Item</button>
                 </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://illustrations.popsy.co/amber/student-walking.svg" alt="Student searching" class="animate__animated animate__fadeInRight">
             </div>
         </section>
 
-        <section id="search-section">
+        <section id="search-section" class="search-section animate__animated animate__fadeInUp">
             <div class="search-container">
-                <input type="text" placeholder="Search for lost items...">
-                <button><i class="fas fa-search"></i></button>
-                <select>
+                <div class="search-box">
+                    <input type="text" placeholder="Search for lost items..." id="search-input">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <select id="category-filter">
                     <option value="all">All Categories</option>
                     <option value="electronics">Electronics</option>
                     <option value="books">Books</option>
@@ -64,17 +69,70 @@
             </div>
         </section>
 
+        <section id="stats" class="stats-section">
+            <div class="stat-card">
+                <i class="fas fa-search stat-icon"></i>
+                <h3 class="counter" data-target="1245">0</h3>
+                <p>Items Found</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-users stat-icon"></i>
+                <h3 class="counter" data-target="856">0</h3>
+                <p>Happy Users</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-clock stat-icon"></i>
+                <h3 class="counter" data-target="72">0</h3>
+                <p>Avg. Recovery Time (hrs)</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-percentage stat-icon"></i>
+                <h3 class="counter" data-target="89">0</h3>
+                <p>Recovery Rate</p>
+            </div>
+        </section>
+
         <section id="lost-items" class="items-section">
-            <h2>Recently Lost Items</h2>
+            <div class="section-header">
+                <h2>Recently Lost Items</h2>
+                <a href="#" class="view-all">View All</a>
+            </div>
             <div class="items-grid" id="lost-items-grid">
                 <!-- Items will be added dynamically by JavaScript -->
             </div>
         </section>
 
         <section id="found-items" class="items-section">
-            <h2>Recently Found Items</h2>
+            <div class="section-header">
+                <h2>Recently Found Items</h2>
+                <a href="#" class="view-all">View All</a>
+            </div>
             <div class="items-grid" id="found-items-grid">
                 <!-- Items will be added dynamically by JavaScript -->
+            </div>
+        </section>
+
+        <section id="how-it-works" class="how-it-works">
+            <h2>How It Works</h2>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <i class="fas fa-exclamation-circle step-icon"></i>
+                    <h3>Report</h3>
+                    <p>Report your lost item or a found item on campus</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <i class="fas fa-bell step-icon"></i>
+                    <h3>Notification</h3>
+                    <p>Get instant notifications for matching items</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <i class="fas fa-handshake step-icon"></i>
+                    <h3>Reunite</h3>
+                    <p>Connect with the finder or owner to reclaim your item</p>
+                </div>
             </div>
         </section>
 
@@ -104,7 +162,10 @@
                     </div>
                     <div class="form-group">
                         <label for="lost-location">Last Seen Location</label>
-                        <input type="text" id="lost-location" required>
+                        <div class="location-input">
+                            <input type="text" id="lost-location" required>
+                            <button type="button" class="location-btn" id="lost-location-btn"><i class="fas fa-map-marker-alt"></i></button>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="lost-date">Date Lost</label>
@@ -116,9 +177,16 @@
                     </div>
                     <div class="form-group">
                         <label for="lost-image">Upload Image (optional)</label>
-                        <input type="file" id="lost-image" accept="image/*">
+                        <div class="image-upload">
+                            <label for="lost-image" class="upload-label">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <span>Choose file</span>
+                            </label>
+                            <input type="file" id="lost-image" accept="image/*">
+                            <div class="image-preview" id="lost-image-preview"></div>
+                        </div>
                     </div>
-                    <button type="submit">Submit Report</button>
+                    <button type="submit" class="btn-primary">Submit Report</button>
                 </form>
             </div>
             
@@ -141,7 +209,10 @@
                     </div>
                     <div class="form-group">
                         <label for="found-location">Found Location</label>
-                        <input type="text" id="found-location" required>
+                        <div class="location-input">
+                            <input type="text" id="found-location" required>
+                            <button type="button" class="location-btn" id="found-location-btn"><i class="fas fa-map-marker-alt"></i></button>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="found-date">Date Found</label>
@@ -153,14 +224,84 @@
                     </div>
                     <div class="form-group">
                         <label for="found-image">Upload Image</label>
-                        <input type="file" id="found-image" accept="image/*" required>
+                        <div class="image-upload">
+                            <label for="found-image" class="upload-label">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <span>Choose file</span>
+                            </label>
+                            <input type="file" id="found-image" accept="image/*" required>
+                            <div class="image-preview" id="found-image-preview"></div>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="found-contact">How to contact you</label>
                         <input type="text" id="found-contact" placeholder="Email or phone" required>
                     </div>
-                    <button type="submit">Submit Found Item</button>
+                    <button type="submit" class="btn-primary">Submit Found Item</button>
                 </form>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials">
+            <h2>Success Stories</h2>
+            <div class="testimonials-container">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"I lost my laptop in the library and thought it was gone forever. Thanks to Campus Lost & Found, I got it back within 2 days!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah J.">
+                        <div>
+                            <h4>Sarah J.</h4>
+                            <p>Computer Science Student</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Found a wallet with cash and IDs. Posted it here and the owner contacted me within hours. Great system!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael T.">
+                        <div>
+                            <h4>Michael T.</h4>
+                            <p>Engineering Professor</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p>"The notification system is amazing. I got an alert when my lost keys were found in the cafeteria."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emily R.">
+                        <div>
+                            <h4>Emily R.</h4>
+                            <p>Biology Student</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -168,36 +309,63 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section">
+                <div class="logo">
+                    <i class="fas fa-search-location"></i>
+                    <h3>Campus Lost & Found</h3>
+                </div>
+                <p>Helping reunite lost items with their owners since 2023</p>
+                <div class="app-download">
+                    <p>Download our app:</p>
+                    <div class="app-buttons">
+                        <button class="app-store-btn"><i class="fab fa-apple"></i> App Store</button>
+                        <button class="play-store-btn"><i class="fab fa-google-play"></i> Play Store</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#lost-items">Lost Items</a></li>
                     <li><a href="#found-items">Found Items</a></li>
                     <li><a href="#report">Report</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h3>Contact</h3>
-                <p>Email: lostandfound@campus.edu</p>
-                <p>Phone: (123) 456-7890</p>
-            </div>
-            <div class="footer-section">
-                <h3>Follow Us</h3>
+                <p><i class="fas fa-envelope"></i> lostandfound@campus.edu</p>
+                <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                <p><i class="fas fa-map-marker-alt"></i> Student Services Building, Room 205</p>
                 <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Subscribe to get updates and success stories</p>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
             </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2023 Campus Lost & Found. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">FAQ</a>
+            </div>
         </div>
     </footer>
 
     <!-- Login Modal -->
     <div id="login-modal" class="modal">
-        <div class="modal-content">
+        <div class="modal-content animate__animated animate__zoomIn">
             <span class="close">&times;</span>
             <h2>Login</h2>
             <form id="login-form">
@@ -209,15 +377,28 @@
                     <label for="login-password">Password</label>
                     <input type="password" id="login-password" required>
                 </div>
-                <button type="submit">Login</button>
-                <p>Don't have an account? <a href="#" id="switch-to-register">Register</a></p>
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn-primary">Login</button>
+                <div class="social-login">
+                    <p>Or login with:</p>
+                    <div class="social-buttons">
+                        <button type="button" class="google-btn"><i class="fab fa-google"></i> Google</button>
+                        <button type="button" class="facebook-btn"><i class="fab fa-facebook-f"></i> Facebook</button>
+                    </div>
+                </div>
+                <p class="switch-form">Don't have an account? <a href="#" id="switch-to-register">Register</a></p>
             </form>
         </div>
     </div>
 
     <!-- Register Modal -->
     <div id="register-modal" class="modal">
-        <div class="modal-content">
+        <div class="modal-content animate__animated animate__zoomIn">
             <span class="close">&times;</span>
             <h2>Register</h2>
             <form id="register-form">
@@ -232,6 +413,10 @@
                 <div class="form-group">
                     <label for="register-password">Password</label>
                     <input type="password" id="register-password" required>
+                    <div class="password-strength">
+                        <span class="strength-bar"></span>
+                        <span class="strength-text">Password strength</span>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="register-confirm-password">Confirm Password</label>
@@ -242,13 +427,37 @@
                     <select id="register-role" required>
                         <option value="student">Student</option>
                         <option value="staff">Staff</option>
+                        <option value="faculty">Faculty</option>
                     </select>
                 </div>
-                <button type="submit">Register</button>
-                <p>Already have an account? <a href="#" id="switch-to-login">Login</a></p>
+                <div class="form-group">
+                    <label class="terms-checkbox">
+                        <input type="checkbox" required>
+                        I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+                    </label>
+                </div>
+                <button type="submit" class="btn-primary">Register</button>
+                <p class="switch-form">Already have an account? <a href="#" id="switch-to-login">Login</a></p>
             </form>
         </div>
     </div>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content success-modal animate__animated animate__zoomIn">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Success!</h2>
+            <p id="success-message">Your item has been reported successfully.</p>
+            <button class="btn-primary" id="success-ok-btn">OK</button>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="TrackHub.js"></script>
 </body>
